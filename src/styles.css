@@ -1,0 +1,160 @@
+body, html {
+    font-family: 'Manrope', sans-serif;
+}
+.main-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: hsl(218, 23%, 16%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    min-width: 320px;
+    position: relative;
+}
+
+.card {
+    width: 90%;
+    max-width: 490px;
+    height: 260px;
+    
+    background-color: hsl(217, 19%, 24%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    gap: 1rem;
+    border-radius: 12px;
+    padding: 1rem 1rem 3rem 1rem;
+    position: relative;
+
+}
+
+.card p {
+    color: hsl(150, 100%, 66%);
+    font-size: 0.7rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    letter-spacing: 0.2rem;
+
+    
+}
+
+.card h2 {
+    padding: 0 1rem 0 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 800;
+}
+
+.separator{
+    width: 70%;
+    height: 20px;
+    background-image: url(/images/pattern-divider-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+.card .reload {
+    position: absolute;
+    bottom: -30px;
+    width: 50px;
+    height: 50px;
+    background-image: url(/images/icon-dice.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: hsl(150, 100%, 66%);
+    transition: 0.3s;
+    z-index: 3;
+}
+.card .copy-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: transparent;
+    border: 0;
+    color: white;
+    
+}
+button {
+    user-select: none;
+}
+
+.card .reload:hover {
+    box-shadow: -3px -1px 42px 0px rgba(82,255,168,1);
+-webkit-box-shadow: -3px -1px 42px 0px rgba(82,255,168,1);
+-moz-box-shadow: -3px -1px 42px 0px rgba(82,255,168,1);
+
+}
+
+
+.lds-ring {
+    display: inline-block;
+    position: absolute;
+    width: 90%;
+    max-width: 490px;
+    height: 260px;
+    
+    background-color: hsl(217, 19%, 24%);
+    border-radius: 12px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+
+
+
+@media (min-width: 1024px) {
+
+.separator {
+    width: 80%;
+    background-image: url(/images/pattern-divider-desktop.svg);
+}
+.card h2 {
+    padding:  0 3rem 0 3rem;
+    font-size: 1.3rem;
+}
+.card p {
+    font-size: 1.1rem;
+}
+}
